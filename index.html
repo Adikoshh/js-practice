@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const firstName = 'Adema ';
+      const lastName = 'Bauyrzhankyzy';
+      const group = 'CS-2120'
+      document.write(firstName + lastName + ' ');
+      document.write(group);
+      </script>
+      <p>Year: </p><p id="year"></p>
+      <p>Today is: </p><p id="weekday"></p>
+      <p>Month: </p><p id="month"></p>
+      <p>Date: </p><p id="date"></p>
+      <p>Hours: </p><p id="hours"></p>
+      <p>Minutes: </p><p id="minutes"></p>
+      <script>
+
+      const d = new Date();
+      const date = new Date();
+
+      const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+      let s = weekday[d.getDay()];
+
+      document.getElementById("year").innerHTML = d.getFullYear();
+
+      document.getElementById("weekday").innerHTML = weekday[d.getDay()];
+
+      document.getElementById("month").innerHTML = d.getMonth() + 1;
+
+      document.getElementById("date").innerHTML = d.getDate();
+
+      document.getElementById("hours").innerHTML = d.getHours();
+
+      document.getElementById("minutes").innerHTML = d.getMinutes();
+      document.write(d);
+      document.write()
+
+</script>
+
+<form action="/action_page.php" method="post">
+  <p>1st Number:</p>
+  <input type="number" name="1st" id="1st" required>
+  <p>2nd Number:</p>
+  <input type="number" name="2nd" id="2nd" required>
+    <input type="submit" value="Multiple" id="multiple">
+  <input type="submit" value="Divide" id="divide">
+  <p>The result is: </p><p id="result"></p>
+</form>
+
+
+<script>
+
+var mult = document.getElementById("multiple");
+mult.onclick = function Multiple() {
+        var x = document.getElementById("1st").value;
+        var y = document.getElementById("2nd").value;
+        var z = y*x
+        document.getElementById("result").innerHTML = z;
+      }
+
+      var div = document.getElementById("divide");
+      div.onclick = function Divide() {
+              var x = document.getElementById("1st").value;
+              var y = document.getElementById("2nd").value;
+              var z = y/x
+              document.getElementById("result").innerHTML = z;
+            }
+    </script>
+
+
+
+  </body>
+</html>
